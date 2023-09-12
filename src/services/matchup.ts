@@ -7,7 +7,7 @@ const populateNFLMatchups = async () => {
 
   matchups.map(async (matchup: any) => {
     try {
-      const response = await axios.post('http://localhost:4000/graphql', {
+      await axios.post('http://localhost:4000/graphql', {
         query: `
             mutation {
                 createMatchup(
