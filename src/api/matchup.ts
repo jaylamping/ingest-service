@@ -19,7 +19,7 @@ export const getUpcomingNFLMatchups = async () => {
     return {
       name: matchup.strEvent,
       description: matchup.strEventDescription,
-      dateTime: matchup.dateEvent + ' ' + matchup.strTimeLocal,
+      dateTime: matchup.dateEvent + 'T' + matchup.strTimeLocal + '+00:00',
       homeTeamId: matchup.idHomeTeam,
       homeTeam: matchup.strHomeTeam,
       awayTeamId: matchup.idAwayTeam,
@@ -31,6 +31,5 @@ export const getUpcomingNFLMatchups = async () => {
     };
   });
 
-  console.log(matchups);
   return matchups;
 };
