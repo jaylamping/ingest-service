@@ -9,6 +9,6 @@ app.listen({ port: 5000 }, () => {
   console.log('Server running at http://localhost:5000');
 });
 
-cron.schedule('* * * * * *', async () => {
+cron.schedule('* * * * *', async () => {
   await populateNFLMatchups();
 });
