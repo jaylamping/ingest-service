@@ -14,13 +14,14 @@ const populateNFLMatchups = async () => {
                     input: {
                       awayTeam: "${matchup.awayTeam}"
                       awayTeamId: "${matchup.awayTeamId}"
-                      dateTime: "${matchup.dateTime}"
-                      externalId: "${matchup.externalId}"
                       homeTeam: "${matchup.homeTeam}"
                       homeTeamId: "${matchup.homeTeamId}"
+                      dateTime: "${matchup.dateTime}"
+                      externalId: "${matchup.externalId}"
                       league: "${matchup.league}"
                       name: "${matchup.name}"
                       sport: "${matchup.sport}"
+                      logo_url: "${matchup.logo_url}"
                     }
                   ) {
                     name
