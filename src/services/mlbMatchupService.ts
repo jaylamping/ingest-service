@@ -5,12 +5,11 @@ const populateMLBMatchups = async () => {
   let newCount = 0;
   const matchups = await getUpcomingMLBMatchups();
 
-  console.log(matchups);
-
   matchups.map(async (matchup: any) => {
     try {
-      await axios.post('http://localhost:4000/graphql', {
-        query: `
+      await axios
+        .post('http://localhost:4000/graphql', {
+          query: `
             mutation {
                 createMatchup(
                     input: {
@@ -30,8 +29,8 @@ const populateMLBMatchups = async () => {
                   }
             }
           `
-      });
-      newCount++;
+        })
+        .then(() => newCount++);
     } catch (error) {
       console.error('Error sending data to Apollo server:', error);
     }

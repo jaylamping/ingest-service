@@ -15,8 +15,6 @@ export const getUpcomingMLBMatchups = async () => {
     .then(res => res.data.events)
     .catch(err => console.error(err));
 
-  console.log(response);
-
   const matchups = response.map((matchup: any) => {
     return {
       name: matchup.strEvent,
