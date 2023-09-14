@@ -15,11 +15,13 @@ export const getUpcomingMLBMatchups = async () => {
     .then(res => res.data.events)
     .catch(err => console.error(err));
 
+  console.log(response);
+
   const matchups = response.map((matchup: any) => {
     return {
       name: matchup.strEvent,
       description: matchup.strEventDescription,
-      dateTime: matchup.dateEvent + 'T' + matchup.strTimeLocal + '+00:00',
+      dateTime: matchup.strTimestamp,
       homeTeamId: matchup.idHomeTeam,
       homeTeam: matchup.strHomeTeam,
       awayTeamId: matchup.idAwayTeam,

@@ -5,6 +5,8 @@ const populateMLBMatchups = async () => {
   let newCount = 0;
   const matchups = await getUpcomingMLBMatchups();
 
+  console.log(matchups);
+
   matchups.map(async (matchup: any) => {
     try {
       await axios.post('http://localhost:4000/graphql', {
