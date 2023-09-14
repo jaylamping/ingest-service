@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { getUpcomingNFLMatchups } from '../api/matchup';
+import { getUpcomingNFLMatchups } from '../api/getUpcomingNFLMatchups';
 
 const populateNFLMatchups = async () => {
   let newCount = 0;
